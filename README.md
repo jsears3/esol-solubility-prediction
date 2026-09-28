@@ -39,13 +39,33 @@ The value here isn't the R² number — it's the validation discipline behind it
 
 ## Repo contents
 
-- `ESOL Project.ipynb` — the full modeling notebook.
-- `2026-09-24-esol-solubility-running-notes.md` — detailed running notes: code, results, concepts covered, and lessons learned at each stage.
-- `2026-09-25-esol-solubility-portfolio-writeup.md` — condensed portfolio summary of the project.
+```
+esol-solubility-prediction/
+├── README.md
+├── LICENSE
+├── environment.yml
+├── notebooks/
+│   └── esol_solubility_model.ipynb   — the full modeling notebook
+└── notes/
+    ├── running-notes.md              — detailed log: code, results, concepts, lessons learned
+    └── portfolio-writeup.md          — condensed portfolio summary
+```
+
+## Setup
+
+```bash
+conda env create -f environment.yml
+conda activate chem-ai
+jupyter notebook notebooks/esol_solubility_model.ipynb
+```
 
 ## Status
 
 Core modeling complete: baseline comparison, feature expansion, ablation study, and cross-validation are all done and documented. Possible extensions (not required): gradient boosting, molecular fingerprints, SHAP-based interpretability.
+
+## License
+
+MIT — see [LICENSE](LICENSE).
 
 ---
 *Last updated: 2026-09-27*
